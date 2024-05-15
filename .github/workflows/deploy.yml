@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: debian
+    runs-on: debian-latest
 
     steps:
     - name: Checkout repository
