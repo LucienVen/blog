@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Liangliang.too</title>
+        <link>http://localhost:1313/</link>
+        <description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
+        <generator>Hugo 0.125.7 https://gohugo.io/</generator>
+        
+            <language>zh-CN</language>
+        
+        
+            <managingEditor>liangliang.too@foxmail.com (liangliang.too)</managingEditor>
+        
+        
+            <webMaster>liangliang.too@foxmail.com (liangliang.too)</webMaster>
+        
+        
+            <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+        
+        <lastBuildDate>Wed, 15 May 2024 16:04:06 &#43;0800</lastBuildDate>
+        
+            <atom:link rel="self" type="application/rss&#43;xml" href="http://localhost:1313/rss.xml" />
+        
+        
+            <item>
+                <title>hello world</title>
+                <link>http://localhost:1313/posts/hello-world/</link>
+                <guid isPermaLink="true">http://localhost:1313/posts/hello-world/</guid>
+                <pubDate>Tue, 14 May 2024 14:57:14 &#43;0800</pubDate>
+                
+                    <author>liangliang.too@foxmail.com (liangliang.too)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+    </channel>
+</rss>
