@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: debian
 
     steps:
     - name: Checkout repository
@@ -19,7 +19,7 @@ jobs:
         hugo-version: 'latest'
 
     - name: Build Hugo site
-      run: hugo
+      run: hugo --minify
 
     - name: Copy files via SSH
       env:
