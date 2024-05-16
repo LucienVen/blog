@@ -1,7 +1,7 @@
 ##########################################
 # 站点配置
 
-baseURL = "https://example.com/"
+baseURL = "http://8.134.52.222/"
 title = "Liangliang.too"
 languageCode = "zh-CN"
 hasCJKLanguage = true
