@@ -18,6 +18,18 @@ jobs:
       with:
         hugo-version: 'latest'
 
+    - name: Show Hugo version
+      run: hugo version
+
+    - name: Show Hugo config
+      run: cat config.toml # or config.yaml, config.json
+
+    - name: List content files
+      run: ls -la content
+
+    - name: List themes
+      run: ls -la themes
+
     - name: Build Hugo site
       run: hugo --minify
     
