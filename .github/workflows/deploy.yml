@@ -26,9 +26,9 @@ jobs:
       run: hugo version
 
     - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.2
 
     - run: gem install asciidoctor
     
