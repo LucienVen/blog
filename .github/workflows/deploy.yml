@@ -59,7 +59,7 @@ jobs:
         rsync -avz --delete public/ $SERVER_USER@$SERVER_IP:/home/lxt/blog/public
 
     
-    - name: SSH into Remote Server and List Directory Files
+    - name: SSH into Remote Server and Docker Rebuild
       env:
         SERVER_USER: ${{ secrets.SERVER_USER }}
         SERVER_IP: ${{ secrets.SERVER_IP }}
@@ -67,6 +67,8 @@ jobs:
       run: |
         ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP << EOF
           cd $TARGET_DIRECTORY
-          ls -la
+          pwd
+          docker stop $(docker ps -qf "name=my-hugo-container") && docker rm $(docker ps -aqf "name=my-hugo-container")
+          docker build -t my-hugo-site . && docker run -d -p 80:80 --name my-hugo-container my-hugo-site
         EOF
 
