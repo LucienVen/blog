@@ -64,11 +64,12 @@ jobs:
         SERVER_USER: ${{ secrets.SERVER_USER }}
         SERVER_IP: ${{ secrets.SERVER_IP }}
         TARGET_DIRECTORY: /home/lxt/blog
+        CONTAINER_NAME: my-hugo-container
       run: |
         ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP << EOF
           cd $TARGET_DIRECTORY
           pwd
-          docker stop $(docker ps -qf "name=my-hugo-container") && docker rm $(docker ps -aqf "name=my-hugo-container")
-          docker build -t my-hugo-site . && docker run -d -p 80:80 --name my-hugo-container my-hugo-site
+          docker stop $CONTAINER_NAME && docker rm $CONTAINER_NAME
+          docker build -t my-hugo-site . && docker run -d -p 80:80 --name $CONTAINER_NAME my-hugo-site
         EOF
 
