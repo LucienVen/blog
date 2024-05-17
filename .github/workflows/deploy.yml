@@ -65,7 +65,7 @@ jobs:
         SERVER_IP: ${{ secrets.SERVER_IP }}
         TARGET_DIRECTORY: /home/lxt/blog
       run: |
-        ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP << 'EOF'
+        ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP << EOF
           cd $TARGET_DIRECTORY
           ls -la
         EOF
