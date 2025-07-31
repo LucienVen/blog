@@ -1,0 +1,47 @@
+<main class="home">
+  <style>
+    .fade-line {
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <div class="poetry">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p class="fade-line" style="animation-delay: 0.3s; font-size: 1.8rem;">
+      從何時開始忌諱空山無人
+    </p>
+    <p class="fade-line" style="animation-delay: 0.6s; font-size: 1.8rem">
+      從何時開始怕遙望星塵
+    </p>
+    <p class="fade-line" style="animation-delay: 1.2s; font-size: 1rem; color: gray; text-indent: 3em;">
+      ——《任我行》陈奕迅
+    </p>
+  </div>
+
+  {{ with .Site.Menus.home }}
+    <div class="links">
+      {{ range . }}
+        {{- $linkType := (string .Pre) -}}
+        {{- $iconName := (string .Post) -}}
+        <a href="{{ .URL }}" class="links-item"{{ if eq $linkType "external" }} target="_blank" rel="noopener"{{ end }}>
+          {{ partial "utils/icon.html" (dict "$" $ "name" $iconName "class" .Identifier) }}
+          {{ .Name }}
+        </a>
+      {{ end }}
+    </div>
+  {{ end }}
+</main>
+

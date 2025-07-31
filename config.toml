@@ -320,7 +320,9 @@ activeInSection = false
 
 homeLayout = "poetry"
 
-homePoetry = [] ## 「诗意人生」
+homePoetry = [
+
+] ## 「诗意人生」
 # 诗句，支持 Markdown
 # 底部链接的内间距，单位：em
 homeLinksPadding = 1
