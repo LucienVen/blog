@@ -1,0 +1,26 @@
+name: Deploy Hugo Blog
+
+on:
+  push:
+    branches:
+      - main  # 或者你的部署分支
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Copy Source to Server & Execute deploy.sh
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            cd /home/lxt/project/blog
+            git pull origin main
+            chmod +x deploy.sh   # 强制确保有执行权限
+            bash deploy.sh
