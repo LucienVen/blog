@@ -22,6 +22,6 @@ cp -r "$BLOG_DIR/public" "$NGINX_HTML_DIR"
 # 重启 nginx 服务
 echo "🔁 重启 nginx 服务 (通过 Docker Compose)..."
 cd /home/lxt/nginx-docker
-docker-compose restart
+docker compose restart
 
 echo "✅ 部署完成。"
