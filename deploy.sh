@@ -9,7 +9,7 @@ NGINX_HTML_DIR="/home/lxt/nginx-docker/html/blog"
 # 编译 hugo 项目
 echo "📦 开始编译 Hugo 静态文件..."
 cd "$BLOG_DIR"
-hugo
+hugo --minify
 
 # 清理旧的 blog 内容
 echo "🧹 清理旧的静态文件..."
