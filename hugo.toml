@@ -42,7 +42,7 @@ home = "Home"
 
 # Social icons
 [[params.social]]
-name = "linkedin"
+name = "Gmail"
 url = "https://www.linkedin.com/in/user/"
 
 [[params.social]]
