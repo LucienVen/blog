@@ -9,6 +9,7 @@ NGINX_HTML_DIR="/home/lxt/nginx-docker/html/blog"
 # 编译 hugo 项目
 echo "📦 开始编译 Hugo 静态文件..."
 cd "$BLOG_DIR"
+git submodule update --init --recursive   # 确保主题同步
 hugo --minify
 
 # 清理旧的 blog 内容
