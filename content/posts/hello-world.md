@@ -1,8 +1,19 @@
-+++
-title = 'hello world'
-date = 2024-05-14T14:57:14+08:00
-draft = false
-+++
+---
+title: "Hello world"
+author: ""
+authorAvatarPath: ""
+date: "2023-11-12"
+summary: "yyyy"
+description: ""
+toc: true
+readTime: false
+autonumber: false
+math: true
+tags: ["database", "java"]
+showTags: true
+hideBackToTop: false
+fediverse: "@username@instance.url"
+---
 
 
 
