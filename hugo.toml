@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = '/'
 languageCode = 'zh-CN'
 title = 'Liangliang.too Blog'
 theme = 'typo'
@@ -12,6 +12,8 @@ tag = 'tags'
 [params]
 # Meta description
 description = "A Tech Blog"
+footerContent = "All content licensed under CC BY-SA 4.0 license unless otherwise stated. Copyright © 2025 lianglian.too"
+
 
 # Appearance settings
 theme = 'auto'
@@ -66,6 +68,10 @@ url = "/posts"
 # 预备画廊
 # name = "gallery"
 # url = "/gallery"
+
+[[params.menu]]
+name = "think"
+url = "/think"
 
 [[params.menu]]
 name = "about"
